@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Emergency Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="login-box">
+  <h3>Login</h3>
+  <input id="loginEmail" placeholder="Email">
+  <input id="loginPass" type="password" placeholder="Password">
+  <button onclick="login()">Login</button>
+</div>
+
+<div class="dashboard">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>🚑 SMART EMERGENCY SYSTEM </h2>
+    <p>Emergency System</p>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <h1>Emergency Dashboard</h1>
+
+    <div class="cards">
+
+      <!-- REGISTER -->
+      <div class="card">
+        <h3>Register User</h3>
+        <input id="name" placeholder="Name">
+        <input id="email" placeholder="Email">
+        <input id="password" type="password" placeholder="Password">
+        <button onclick="register()">Register</button>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="card">
+        <h3>Add Contact</h3>
+        <input id="userId" placeholder="User ID">
+        <input id="contactName" placeholder="Contact Name">
+        <input id="phone" placeholder="Phone">
+        <button id="contactBtn" onclick="addContact()">Add Contact</button>
+      </div>
+      <div class="status-panel">
+  <h3>System Status</h3>
+  <p id="statusUser">❌ User Not Registered</p>
+  <p id="statusContact">❌ Contact Not Added</p>
+  <p id="statusSOS">❌ SOS Not Triggered</p>
+</div>
+
+<div class="contact-list">
+  <h3>Saved Contacts</h3>
+  <ul id="contacts"></ul>
+</div>
+
+      <!-- SOS -->
+      <div class="card sos">
+        <h3>Emergency</h3>
+        <input id="sosUserId" placeholder="User ID">
+        <button class="sos-btn" onclick="sendSOS()">🚨 SEND SOS</button>
+      </div>
+
+      <div class="map-container">
+  <h3>📍 Live Location</h3>
+  <iframe id="mapFrame" src="" loading="lazy"></iframe>
+</div>
+
+    </div>
+
+    <div id="result"></div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

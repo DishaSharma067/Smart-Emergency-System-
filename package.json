@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "react-router-dom": "^7.14.0",
+    "twilio": "^5.13.0"
+  }
+}
